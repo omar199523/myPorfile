@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all 0.3 linear;
 }
 body{
     height: 200vh;
@@ -16,7 +17,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    transition: all 0.4s linear;
+    z-index: 1000;
 }
 
 header h1 a{
@@ -35,7 +37,7 @@ header  ul li{
     padding: 15px;
 }
 header  ul li:hover{
-    background-color: ; 
+    background-color:#707070 ; 
 }
 
 header ul li a {    
@@ -47,8 +49,34 @@ header ul li:nth-of-type(1) a{
 }
 .haderScroll{
     background-color: #202020;
-    padding:7px 100px;
+    padding: 10px 100px;
 }
+#toggle{
+    width: 50px;
+    height: 50px;
+
+}
+#toggle *{
+    width: 100%;
+    height: 8px;
+    margin: 5px 0px 0px 0px;
+   background-color: #707070;
+   border-radius: 2px;
+   overflow: hidden; 
+   transition: all 0.3s linear;
+}
+.toggle div:nth-of-type(1){
+    transform: rotate(45deg);
+    transform: translateY(50%);
+}
+.toggle div:nth-of-type(2){
+    transform: translateX(-100%);
+}
+.toggle div:nth-of-type(3){
+    transform: rotate(-45deg);
+    transform: translateY(-50%);
+}
+
 .haderScroll h1 a{
     color:#EEFBFB;
 }
@@ -56,8 +84,27 @@ header ul li:nth-of-type(1) a{
     text-decoration: none;
     color: #EEFBFB;
 }
+@media (max-width:767px){
+    header{
+        padding:20px 70px;
+    }
+    .haderScroll{
+        background-color: #202020;
+        padding:7px 70px;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
 
+}
+@media (min-width:992px) and (max-width:1199px){
+
+}
+@media (min-width:1200px){
+
+}
 /*end header styling*/
+
+/*********************************************************************************/
 
 /*start Home page styling */
 #homePage{
@@ -104,16 +151,47 @@ header ul li:nth-of-type(1) a{
     text-decoration: none;
     color: #FFDf6C;
     padding: 7px;
-    border: 2px solid #FFDf6C;
-    border-radius: 10%;
+    border: 1px solid #FFDf6C;
+    border-radius: 1%;
+}
+
+@media (max-width:767px){
+    #homeBage{
+        height: 85vh;
+    }
+    #main{
+        flex-direction: column;
+        top: 20%;
+        margin:0 auto;
+    }
+    #main h2 span{
+        font-size: 1em;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+
+}
+@media (min-width:992px) and (max-width:1199px){
+
+}
+@media (min-width:1200px){
+
 }
 /*end home section styeing*/
+
+/*********************************************************************************/
+
+/*start about me section styling*/
 #aboutMe{
     height: 70vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
 }
 #aboutCon{
-    margin: 120px auto 0px;
+    flex: 600px 2 1;
+    margin: 10px auto 0px;
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -123,10 +201,134 @@ header ul li:nth-of-type(1) a{
 #aboutCon h2,p{
     margin: 15px 0px 0px 0px;
 }
+#aboutCon{
+    color: #FFDf6C;
+}
+#aboutImg{
+    flex: 40% 2 1;
+    background-image: url("img/about.png");
+    background-size: cover;
+}
+@media (max-width:767px){
+    #aboutMe{
+        height: 170vh;
+        justify-content: flex-start;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
 
-#myPoject{
+}
+@media (min-width:992px) and (max-width:1199px){
+
+}
+@media (min-width:1200px){
+
+}
+/*end about section style*/
+
+/*********************************************************************************/
+
+/*slart serveis section styling*/
+#serveis{
     background-color: #3F3F3F;
+}
+#serveisCon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.oneSarveis{
+    width: 340px;
+    height: 50vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15%;
+}
+.oneSarveis i{
+    font-size: 3em;
+    color: #3F3F3F;
+    margin: 20px ;
+}
+.oneSarveis h3,p{
+    text-align: center;
+    margin: 10px;
+    color: #3F3F3F;
+}
+.oneSarveis a{
+    margin: 20px;
+    text-decoration: none;
+    color: #FFDf6C;
+    padding: 7px;
+    border: 1px solid #FFDf6C;
+    border-radius: 1%;
+}
+.oneSarveis:hover{
+    background-color: #3F3F3F;
+    box-shadow: 3px 3px 3px #ddd;
+}
+.oneSarveis:hover i{
+    color: #fff;
+}
+.oneSarveis:hover h3{
+    color: #fff;
+}
+.oneSarveis:hover p{
+    color: #fff;
+}
+
+@media (max-width:767px){
+    #serveisCon{
+        justify-content: center;
+    }
+    .oneSarveis{
+        margin: 20px;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+
+}
+@media (min-width:992px) and (max-width:1199px){
+
+}
+@media (min-width:1200px){
+
+}
+/*end serveis section styling*/
+
+
+/*********************************************************************************/
+
+/*start myProjsct section styling*/
+#myPoject{
     height: 70vh;
 }
 #myProjsctCon{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
+.oneProject{
+    width: 340px;
+    flex: 340 3 1;
+    background-color: #5a2727;
+}
+
+/*end myProjsct section styling*/
+
+/*********************************************************************************/
+
+
+
+/*slart serveis section styling*/
+#ConectUs{
+    background-color: #3F3F3F;
+    height: 70vh;
+}
+/*end serveis section styling*/
