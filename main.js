@@ -4,4 +4,7 @@ window.onscroll=()=>{
 document.getElementById("toggle").onclick=()=>{
     document.getElementById("toggle").classList.toggle("toggle")
 }
+document.getElementById('toggle').onclick = () => {
+  document.getElementById('toggle').classList.toggle('open');
+}
 
