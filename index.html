@@ -11,15 +11,15 @@
     <body>
         <header id="header">
             <h1><a href="#">PROFILE</a></h1>
-            <ul class="hadin-ms hadin-sx">
+            <ul class="hadin-ms hadin-sx" id="nav-bar">
                 <li><a href="#homePage">Home</a></li>
                 <li><a href="#aboutMe">About me</a></li>
                 <li><a href="#myPoject">My Project</a></li>
                 <li><a href="#serveis">serveis</a></li>
                 <li><a href="#ConectUs">Conect us</a></li>
             </ul>
-            <div id="toggle" class="visbule-sx visbule-ms">
-                <div></div><div></div><div></div>
+            <div id="toggle" class="nav-body-icon">
+                <div class="nav-body-icon-bor"></div>
             </div>
         </header>
         <section id="homePage">
@@ -40,6 +40,7 @@
                 <div id="aboutImg"></div>           
             </section>
             <section id="serveis" >
+                <h2>Serveis</h2>
                 <div class="container" id="serveisCon">
                     <div class="oneSarveis" >
                         <i class="fas fa-code " size="5x" ></i>
@@ -63,14 +64,36 @@
             </section>
             <section id="myPoject">
                 <div id="myProjsctCon" class="container">
-                    <div class="oneProject">oneproject</div>
-                    <div class="oneProject">oneproject</div>
-                    <div class="oneProject">oneproject</div>
+                    <div class="oneProject"></div>
+                    <div class="oneProject"></div>
+                    <div class="oneProject"></div>
                 </div>
             </section>
             
             <section id="ConectUs">
-
+                <h2>Conect Us</h2>
+                <div class="container" id="conectUsCon">
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="pleces enter youer name..."/>
+                        <label for="name">Email</label>
+                        <input type="email" name="name" id="email" placeholder="pleces enter youer name..."/>
+                        <label for="name">Massege</label>
+                        <textarea id ="massege">
+                        
+                        </textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                    <div>
+                        <div>
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <i class="fad fa-paper-plane"></i> <p>model199523@gmail.com</p>
+                        <p>py omar al-gamri</p>
+                    </div>
+                </div>
             </section>
         <script src="./myFramwark/myFramwark.js"></script>
         <script src="./main.js"></script>
