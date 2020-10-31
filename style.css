@@ -228,7 +228,7 @@ header ul li:nth-of-type(1) a{
     flex-wrap: wrap;
 }
 #aboutCon{
-    height: 50vh;
+    min-height: 50vh;
     flex: 600px 2 1;
     margin: 10px auto 0px;
     display: flex;
@@ -244,13 +244,13 @@ header ul li:nth-of-type(1) a{
     color: #FFDf6C;
 }
 #aboutImg{
+    min-height: 50vh;
     flex: 600px 2 1;
     background-image: url("img/about.png");
     background-size: cover;
 }
 @media (max-width:767px){
     #aboutMe{
-        height: 170vh;
         justify-content: flex-start;
     }
 }
