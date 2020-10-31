@@ -301,15 +301,16 @@ header ul li:nth-of-type(1) a{
     align-items: center;
     border-radius: 15%;
 }
+.oneSarveis *{
+  color: #3F3F3F;
+}
 .oneSarveis i{
     font-size: 3em;
-    color: #3F3F3F;
     margin: 20px ;
 }
 .oneSarveis h3,p{
     text-align: center;
     margin: 10px;
-    color: #3F3F3F;
 }
 .oneSarveis a{
     margin: 20px;
@@ -357,7 +358,14 @@ header ul li:nth-of-type(1) a{
 
 /*start myProjsct section styling*/
 #myPoject{
-    height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#myPoject h2 {
+  padding: 15px;
+  color: #FFDf6C;
 }
 #myProjsctCon{
     height: 100%;
@@ -369,8 +377,42 @@ header ul li:nth-of-type(1) a{
 }
 .oneProject{
     width: 340px;
-    flex: 340 3 1;
-    background-color: #5a2727;
+    height: 340px;
+    margin: 20px auto 0px;
+    background-color: #3F3F3F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15%;
+}
+.oneProject .projectImg{
+  
+}
+.oneProject h3,p{
+    text-align: center;
+    margin: 10px;
+    color: #fff;
+}
+.oneProject a{
+    margin: 20px;
+    text-decoration: none;
+    color: #FFDf6C;
+    padding: 7px;
+    border: 1px solid #FFDf6C;
+    border-radius: 1%;
+}
+.oneProject:hover{
+    background-color: #fff;
+    box-shadow: 3px 3px 3px #ddd;
+}
+.oneProject:hover i{
+    color: #3F3F3F;
+}
+.oneProject:hover h3{
+    color: #3F3F3F;
+}
+.oneProject:hover p{
+    color: #3F3F3F;
 }
 
 /*end myProjsct section styling*/
