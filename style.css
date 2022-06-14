@@ -5,6 +5,12 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     transition: all 0.3 linear;
 }
+.section{
+    min-height: 95vh;
+}
+.section h2{
+    margin-top: 130px;
+}
 
 
 /*start header styling */
@@ -125,9 +131,12 @@ header ul li:nth-of-type(1) a{
     header{
         padding:20px 25px;
     }
+    .section h2{
+        margin-top: 20px;
+    }
     .haderScroll{
         background-color: #202020;
-        padding:7px 25px;
+        padding:7px 20px;
     }
     .nav-body-icon{
         display: flex;
@@ -145,7 +154,7 @@ header ul li:nth-of-type(1) a{
 /*********************************************************************************/
 
 /*start Home page styling */
-#homePage{
+.homePage{
     margin: 0px;
     height: 100vh;
     background-image: url("./img/homeBak.jpg");
@@ -164,7 +173,7 @@ header ul li:nth-of-type(1) a{
     background-color: #202020;
     opacity: 0.6;
 }
-#main{
+.main{
     position: absolute;
     top:40%;
     left: 80px;
@@ -176,23 +185,24 @@ header ul li:nth-of-type(1) a{
     justify-content: space-around;
     z-index: 1;
 }
-#main div h2{
+.main div h2{
     color: #EEFBFB;
     
 }
-#main div p {
+.main div p {
+    line-height: 2em;
     color: #EEFBFB;
     
 }
-#main div h2{
+.main div h2{
   font-size: 1.7em;
 }
-#main div h2 span{
+.main div h2 span{
     color: #FFDf6C;
     font-size:2rem ;
     margin: 10px;
 }
-#main div a{
+.main div a{
     margin: 50px 30px;
     text-decoration: none;
     color: #FFDf6C;
@@ -200,17 +210,20 @@ header ul li:nth-of-type(1) a{
     border: 1px solid #FFDf6C;
     border-radius: 1%;
 }
+.my-data p{
+    text-align: left !important;
+}
 
 @media (max-width:767px){
-    #homeBage{
+    .homeBage{
         height: 85vh;
     }
-    #main{
+    .main{
         flex-direction: column;
         top: 20%;
         margin:0 auto;
     }
-    #main h2 span{
+    .main h2 span{
         font-size: 1rem;
     }
 }
@@ -228,35 +241,40 @@ header ul li:nth-of-type(1) a{
 /*********************************************************************************/
 
 /*start about me section styling*/
-#aboutMe{
+.aboutMe{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-#aboutCon{
+.aboutCon{
     min-height: 50vh;
     flex: 600px 2 1;
     margin: 10px auto 0px;
     display: flex;
     flex-direction:column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     border-radius: 10px;
 }
-#aboutCon h2,p{
+.aboutCon >h2{
+    color: #fad03a;
+}
+.aboutCon > p{
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
     margin: 20px 0px 0px 0px;
+    color: #202020 !important;
 }
-#aboutCon{
-    color: #FFDf6C;
-}
-#aboutImg{
+
+.aboutImg{
     min-height: 50vh;
     flex: 600px 2 1;
     background-image: url("img/about.png");
     background-size: cover;
 }
 @media (max-width:767px){
-    #aboutMe{
+    .aboutMe{
         justify-content: flex-start;
     }
 }
@@ -274,18 +292,18 @@ header ul li:nth-of-type(1) a{
 /*********************************************************************************/
 
 /*slart serveis section styling*/
-#serveis{
+.serveis{
     background-color: #3F3F3F;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#serveis h2{
+.serveis h2{
     padding: 15px;
     color: #FFDf6C;
 }
-#serveisCon{
+.serveis-con{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -293,8 +311,10 @@ header ul li:nth-of-type(1) a{
     align-items: center;
 }
 .oneSarveis{
-    width: 340px;
-    height: 340px;
+    flex: 1 1 320px;
+    padding: 10px;
+    margin-right: 10px;
+    aspect-ratio: 1/1;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -335,7 +355,7 @@ header ul li:nth-of-type(1) a{
 }
 
 @media (max-width:767px){
-    #serveisCon{
+    .serveisCon{
         justify-content: center;
     }
     .oneSarveis{
@@ -357,17 +377,17 @@ header ul li:nth-of-type(1) a{
 /*********************************************************************************/
 
 /*start myProjsct section styling*/
-#myPoject{
+.myPoject{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#myPoject h2 {
+.myPoject > h2 {
   padding: 15px;
   color: #FFDf6C;
 }
-#myProjsctCon{
+.myProjsctCon{
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -376,24 +396,31 @@ header ul li:nth-of-type(1) a{
     align-items: center;
 }
 .oneProject{
-    width: 340px;
-    height: 340px;
-    margin: 20px auto 0px;
+    flex: 1 1 300px;
+    margin-right: 10px;
+    aspect-ratio: 1/1;
     background-color: #3F3F3F;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 15%;
 }
-.oneProject .projectImg{
-  
+.weebsite-img{
+    margin-top: 15px;
+    aspect-ratio: 2/1;
+    border-radius:15px ;
 }
-.oneProject h3,p{
+.weebsite-img >img{
+    width: 100%;
+    height: 100%;
+}
+
+.oneProject > h3,p{
     text-align: center;
     margin: 10px;
     color: #fff;
 }
-.oneProject a{
+.oneProject > a{
     margin: 20px;
     text-decoration: none;
     color: #FFDf6C;
@@ -405,14 +432,20 @@ header ul li:nth-of-type(1) a{
     background-color: #fff;
     box-shadow: 3px 3px 3px #ddd;
 }
-.oneProject:hover i{
+.oneProject:hover > i{
     color: #3F3F3F;
 }
-.oneProject:hover h3{
+.oneProject:hover > h3{
     color: #3F3F3F;
 }
-.oneProject:hover p{
+.oneProject:hover > p{
     color: #3F3F3F;
+}
+.weebsite-img{
+    width: 85%;
+}
+.weebsite-img >img{
+    width: 100%;
 }
 
 /*end myProjsct section styling*/
@@ -422,18 +455,18 @@ header ul li:nth-of-type(1) a{
 
 
 /*slart serveis section styling*/
-#ConectUs{
+.Conect-me{
     background-color: #3F3F3F;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#ConectUs h2{
+.Conect-me > h2{
     padding: 15px;
     color: #FFDf6C;
 }
-#conectUsCon{
+.conect-me-con{
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
@@ -441,37 +474,43 @@ header ul li:nth-of-type(1) a{
     align-items: center;
 }
 
-#conectUsCon form{
+.massege-form{
     width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-#conectUsCon form *{
+.massege-form > *{
     width: 100%;
     padding: 7px;
     border-radius:10px;
     margin-top:10px ;
     color: #FFDf6C;
 }
-#conectUsCon form button{
+.massege-form > button{
     width: 30%;
     background: transparent;
     border: 1px solid #FFDf6C;
 }
 
-#conectUsCon div{
+.social-media{
     flex:500px; 
+    aspect-ratio: 2/1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
-#conectUsCon div *{
+.social-media > *{
   color: #fff;
+  
 }
-#conectUsCon div div{ 
+.social-media-icon > a{
+    text-decoration: none;
+    color: #fff;
+}
+.social-media-icon{ 
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -479,9 +518,9 @@ header ul li:nth-of-type(1) a{
     align-items: center;
 }
 
-#conectUsCon div div {
+.social-media > div {
     font-size: 3em;
     color: #fff;
 }
-#c
+
 /*end serveis section styling*/
